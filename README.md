@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Project Setup and Functionality
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Setup: Clone Repository
 
-## Available Scripts
+Clone the project repository from the provided URL.
 
-In the project directory, you can run:
+### `git clone {repo url}`
+
+## Install Dependencies:
+
+### `npm install`
+
+## Start Development Server:
 
 ### `npm start`
-
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Functionalities:
 
-### `npm test`
+## Adding Transactions:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users can add income and expense transactions.
+Each transaction includes a category (e.g., Salary, Rent, Groceries), amount, and date.
 
-### `npm run build`
+## Transaction List:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Display a list of all transactions, categorized for easy viewing.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Total Balance Calculation:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Users can calculate their total balance by subtracting total expenses from total income.
 
-### `npm run eject`
+## Charts:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Implement basic bar chart.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Material UI Integration:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Utilize Material UI components for a visually appealing and user-friendly interface.
+Components include TextFields, Buttons, Tables, etc.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Redux:
 
-## Learn More
+State Management: Redux is used for managing the application state.
+Reducers: reducers to handle state changes.
+Actions: Actions to trigger state changes.
+Store: Configure the Redux store and middleware.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Material-UI:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+UI Components: Material-UI components for consistent and beautiful UI design.
+Theming: Theme according to project requirements.
+Grid Design: Material-UI grid system and components.
 
-### Code Splitting
+## Project Features:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CRUD Operations: CRUD operations on data with Redux actions and reducers.
+Graphs: Bar chart for showing data
+Searching: Search operations on categories.
