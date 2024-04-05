@@ -1,8 +1,11 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./main-view.css";
 import TransactionStatus from "./TransactionStatus";
 import { useSelector } from "react-redux";
 import { getCurrentFormattedDate } from "../utils/helpers";
+import useAddTransaction from "../custom-hooks/useAddTransaction";
+import NewTransaction from "./NewTransaction";
+import CustomModal from "../global-components/CustomModal";
 
 const Headers = [
   { name: "#", accessor: "number", flex: 1, textAlign: "center" },
@@ -16,13 +19,27 @@ const Headers = [
 
 const ExpenseTable = () => {
   const { transactions } = useSelector((state) => state);
-  console.log(transactions);
+  const [isOpen, openModal, closeModal, _, updateTransaction] = useAddTransaction();
+  const [formData, setFormData] = useState({});
+  console.log(updateTransaction);
+
+  const handleEditTransaction = (transaction) => {
+    setFormData(transaction);
+    openModal()
+  }
   return (
     <div
       style={{ width: "100%", height: "400px", overflow: "auto" }}
       className="expense-table-container"
     >
       <h3 className="recent-transactions mt-15">Transactions</h3>
+      <CustomModal
+        isOpen={isOpen}
+        onClose={closeModal}
+        onOk={() => updateTransaction(formData)}
+      >
+        <NewTransaction formData={formData} setFormData={setFormData} showLabels={false}/>
+      </CustomModal>
       <div className="dflex flex-col" style={{ width: "100%" }}>
         <div className="dflex table-header">
           {Headers.map((heading) => {
@@ -38,7 +55,7 @@ const ExpenseTable = () => {
             );
           })}
         </div>
-        {transactions.map((transaction, index) => {
+        {transactions?.map((transaction, index) => {
           const { status, category, amount, transactionDate, description } =
             transaction;
           return (
@@ -69,8 +86,8 @@ const ExpenseTable = () => {
                 <div style={{ flex: 2, textAlign: "center", padding: "8px" }}>
                   {getCurrentFormattedDate(transactionDate)}
                 </div>
-                <div style={{ flex: 2, textAlign: "center", padding: "8px" }}>
-                  Edit/Delete
+                <div style={{ flex: 2, textAlign: "center", padding: "8px" }} onClick={() => handleEditTransaction(transaction)}>
+                  Edit
                 </div>
               </Fragment>
             </div>

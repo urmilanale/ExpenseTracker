@@ -3,6 +3,7 @@ import {
   CREDIT_TRANSACTION,
   DEBIT_TRANSACTION,
   DELETE_CATEGORY,
+  UPDATE_TRANSACTION,
 } from "../actions";
 import { initState } from "./initialState";
 
@@ -56,6 +57,14 @@ export const expenseReducer = (state = initState, action) => {
         ...state,
         categories: [action.payload, ...categories],
       };
+    case UPDATE_TRANSACTION:
+      const { timeStamp } = payload;
+      const index = transactions?.findIndex(transaction => transaction?.timeStamp === timeStamp ) 
+      const _transactions = {...transactions}
+      _transactions[index] = {...payload, timeStamp: Date.now()};
+      //TODO: need to apply a validation on transaction update and update the balances accordingly depends upon
+      // types of transaction
+      return state;
     default:
       return state;
   }

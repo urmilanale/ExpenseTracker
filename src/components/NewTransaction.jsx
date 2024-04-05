@@ -4,7 +4,7 @@ import { MenuItem, Select, TextField } from "@mui/material";
 import { useSelector } from "react-redux";
 import { getCurrentFormattedDate } from "../utils/helpers";
 
-const NewTransaction = ({ formData, setFormData }) => {
+const NewTransaction = ({ formData, setFormData, showLabels = true }) => {
   const { categories } = useSelector((state) => state);
   const handleFormDataChange = (e) => {
     debugger;
@@ -34,7 +34,7 @@ const NewTransaction = ({ formData, setFormData }) => {
         <Select
           className="form-entity"
           defaultValue={categories[0]}
-          label="Age"
+          label="category"
           value={formData.category}
           name="category"
           onChange={handleFormDataChange}
@@ -47,7 +47,7 @@ const NewTransaction = ({ formData, setFormData }) => {
         </Select>
         <TextField
           name="amount"
-          label="Amount in Rs"
+          label={showLabels ? "Amount in Rs" : ''}
           variant="outlined"
           className="mt-15 mb-15 form-entity"
           value={formData.amount}
@@ -63,7 +63,7 @@ const NewTransaction = ({ formData, setFormData }) => {
         />
         <TextField
           name="description"
-          label="Description"
+          label={showLabels ? "Description" : ''}
           variant="outlined"
           className="mt-15 mb-15 form-entity"
           value={formData.description}

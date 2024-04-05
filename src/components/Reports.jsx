@@ -20,7 +20,7 @@ const Reports = () => {
 
   const finalExpensePerMonth = useMemo(() => {
     const dataToDisplay = {};
-    expenseTransactions.forEach((t) => {
+    expenseTransactions?.forEach((t) => {
       const { amount, transactionDate } = t;
       const monthName = getMonthNameByDate(transactionDate);
       if (dataToDisplay[monthName] === undefined) {
@@ -34,7 +34,7 @@ const Reports = () => {
 
   const finalExpensePerCategory = useMemo(() => {
     const dataToDisplay = {};
-    expenseTransactions.forEach((t) => {
+    expenseTransactions?.forEach((t) => {
       const { amount, category } = t;
 
       if (dataToDisplay[category] === undefined) {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { CREDIT_TRANSACTION, DEBIT_TRANSACTION } from "../redux/actions";
+import { CREDIT_TRANSACTION, DEBIT_TRANSACTION, UPDATE_TRANSACTION } from "../redux/actions";
 
 const useAddTransaction = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,12 @@ const useAddTransaction = () => {
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
-  const addTransaction = (formData, callback = () => null) => {
+  const updateTransaction = (formData) => {
+    dispatch({type: UPDATE_TRANSACTION, payload: formData})
+  }
+
+  const addTransaction = (formDataFields, callback = () => null) => {
+    const formData = {...formDataFields, timeStamp: Date.now()};
     if (formData.category === "Salary") {
       dispatch({
         type: CREDIT_TRANSACTION,
@@ -24,7 +29,7 @@ const useAddTransaction = () => {
     closeModal();
     callback();
   };
-  return [isOpen, openModal, closeModal, addTransaction];
+  return [isOpen, openModal, closeModal, addTransaction, updateTransaction];
 };
 
 export default useAddTransaction;

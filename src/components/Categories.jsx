@@ -7,6 +7,7 @@ import CustomModal from "../global-components/CustomModal";
 import DeleteButton from "../custom-logo/DeleteButton";
 import { ADD_CATEGORY, DELETE_CATEGORY } from "../redux/actions";
 import useAddTransaction from "../custom-hooks/useAddTransaction";
+
 const Categories = () => {
   const [categoryToAdd, setCategoryToAdd] = useState("");
   const { categories, transactions } = useSelector((state) => state);
