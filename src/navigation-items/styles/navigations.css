@@ -1,0 +1,80 @@
+.top-nav-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+.app-name{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.horizontal-seperator {
+    height: 0.2px;
+    background-color: black;
+    margin-bottom: 15px;
+}
+.p-5 {
+    padding: 0 5px;
+}
+.dflex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.mr-5 {
+    margin-right: 5em;
+}
+.mt-15 {
+    margin-top: 10px;
+}
+.mb-15{
+    margin-bottom: 15px;
+}
+.ml-15{
+margin-left: 15px;
+}
+.card-heading {
+    font-size: 16px;
+    color: rgb(90, 88, 88);
+    font-weight: 600;
+}
+.card-info {
+    font-size: 24px;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+}
+.cardinfo-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.expense-table-container {
+    background-color: #fff;
+    margin-right: 20px;
+}
+.recent-transactions {
+   margin-top: 20px auto;
+   text-align: center;
+}
+.button-group {
+ width: 200px;   
+ justify-content: space-between;
+}

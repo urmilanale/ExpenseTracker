@@ -1,0 +1,109 @@
+.main-view-container {
+    flex: 1;
+    justify-content: space-between;
+}
+
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+.expense-table-view {
+    border: 1px solid blue;
+    min-height: 400px;
+    height: 70vh;
+    overflow-y: auto;
+    flex: 1;
+    max-width: 65vw;
+    margin-right: 20px;
+}
+.reports-container {
+    min-width: 300px;
+    max-width: 30vw;
+    height: 65vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.pie-chart-container {
+    align-items: center;
+    margin: 10px auto;
+    background-color: rgb(247, 247, 247);
+}
+.monthly-spend-container {
+    border: 1px solid red;
+    margin: 10px 0;
+    padding: 5px;
+}
+.montly-data {
+    justify-content: space-between;
+}
+.table-header  {
+    background: "#f2f2f2";
+    margin: 10px 0px;
+}
+.p-8 {
+    padding: 8px;
+}
+.table-heading-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(109, 109, 109);
+}
+.transaction-status {
+    width: 60px;
+        border-radius: 5px;
+}
+.status-failed {
+    border: 1px solid #be424231;
+    color: rgb(241, 8, 8);
+    background-color: hsla(0, 49%, 50%, 0.322);
+}
+.status-success {
+    border: 1px solid #be424231;
+    color: rgba(9, 255, 0, 0.945);
+    background-color: hsla(86, 75%, 41%, 0.11);
+}
+.transaction-message {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.expense-table-container {
+    width: 100%;
+}
+
+.table-container {
+    width: 100%;
+    overflow: auto;
+}
+
+.table-header {
+    display: flex;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-heading-title {
+    padding: 8px;
+}
+
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-cell {
+    flex: 1;
+    padding: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+.categories {
+    margin-left: 20px;
+    margin-top: 50px;
+    min-height: fit-content;
+    max-height: 500px;
+    overflow-y: auto;
+}
+.category-name {
+    font-size: 20px;
+    text-align: left;
+    margin: 10px;
+    border: 1px solid #dddddd,
+}
+.display-category {
+    justify-content: space-between;
+    padding: 5px 50px;
+}
+
+.add-category {
+    justify-content: space-around;
+    align-items: center;
+}

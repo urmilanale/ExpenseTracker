@@ -1,0 +1,42 @@
+.form-container {
+align-items: center;
+}
+.text-center {
+    text-align: center;
+    width: 100%;;
+}
+.form-wrapper {
+ width: 60%;   
+}
+.form-entity {
+    margin-top: 20px !important;
+}
+.datepicker {
+    position: relative;
+    display: inline-block;
+}
+.datepicker-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.datepicker-input::-webkit-calendar-picker-indicator {
+    position: relative;
+    top: 50%;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+
+.datepicker-input::-webkit-calendar-picker-dropdown {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+}
