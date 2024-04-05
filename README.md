@@ -55,6 +55,6 @@ Grid Design: Material-UI grid system and components.
 
 ## Project Features:
 
-CRUD Operations: CRUD operations on data with Redux actions and reducers.
+CRUD Operations: CRUD operations on data with Redux actions and reducers. // Update and delete transaction : In progress
 Graphs: Bar chart for showing data
 Searching: Search operations on categories.
